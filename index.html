@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Games: Tic Tac Toe & Memory Matching</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>🎮 Game Zone</h1>
+  <div class="nav">
+    <button onclick="showGame('tictactoe')">Tic Tac Toe</button>
+    <button onclick="showGame('memory')">Memory Matching</button>
+  </div>
+
+  <div id="tictactoe" class="game" style="display:none;">
+    <h2>Tic Tac Toe</h2>
+    <select id="ttt-mode">
+      <option value="single">Single Player (vs Computer)</option>
+      <option value="multi">Multiplayer</option>
+    </select>
+    <div class="ttt-board" id="ttt-board"></div>
+    <p id="ttt-status"></p>
+    <p id="ttt-score"></p>
+    <button onclick="startTicTacToe()">Restart</button>
+  </div>
+
+  <div id="memory" class="game" style="display:none;">
+    <h2>Memory Matching</h2>
+    <select id="memory-mode">
+      <option value="single">Single Player</option>
+      <option value="multi">Multiplayer (2 Players)</option>
+    </select>
+    <div id="memory-board" class="memory-board"></div>
+    <p id="memory-status"></p>
+    <p id="memory-score"></p>
+    <button onclick="initMemoryGame()">Restart</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
